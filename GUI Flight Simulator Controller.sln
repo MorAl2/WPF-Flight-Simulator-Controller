@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI Flight Simulator Controller", "GUI Flight Simulator Controller\GUI Flight Simulator Controller.csproj", "{18181708-588A-4A36-B85F-373320BF73FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18181708-588A-4A36-B85F-373320BF73FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18181708-588A-4A36-B85F-373320BF73FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18181708-588A-4A36-B85F-373320BF73FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18181708-588A-4A36-B85F-373320BF73FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1B97E401-6C38-438E-B207-4F6F4AA01652}
+	EndGlobalSection
+EndGlobal
