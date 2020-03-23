@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="GUI_Flight_Simulator_Controller.controlers.DashBoard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI_Flight_Simulator_Controller.controlers"
+
+             mc:Ignorable="d" Height="359.844" Width="277" >
+    <Grid   Background="#3a4036" VerticalAlignment="Top" HorizontalAlignment="Center" Height="360" Width="276" Margin="0,0,-1,-2" >
+        <Grid.RowDefinitions >
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="134"/>
+            <ColumnDefinition Width="166"/>
+        </Grid.ColumnDefinitions>
+        <Label Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6" Content="Heading:" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,2" Width="124" FontWeight="Bold"></Label>
+        <Label Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Content="Vertical Speed:" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,2" Width="124" FontWeight="Bold"></Label>
+        <Label Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Content="Ground Speed:" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,2" Width="124" FontWeight="Bold"></Label>
+        <Label Background="#292c26" Foreground="#939e89" x:Name="L1" FontSize="14" Padding="6"  Content="Air Speed:" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,2" Width="124" FontWeight="Bold"/>
+        <Label Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Content="Gps Altitude:" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,2" Width="124" FontWeight="Bold"></Label>
+        <Label Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Content="Roll:" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,2" Width="124" FontWeight="Bold"></Label>
+        <Label Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Content="Pitch:" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,2" Width="124" FontWeight="Bold"></Label>
+        <Label Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Content="Altitude:" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,2" Width="124" FontWeight="Bold"></Label>
+        <Label Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Content="Additional Information:" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,2,106,0" Width="189" FontWeight="Bold" Height="31" Grid.ColumnSpan="2"></Label>
+
+
+        <Label Grid.Column="1" Grid.Row="0" MinWidth="124" Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Name="heading" Content="{Binding Heading}"  HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Margin="5,3,37,3" ></Label>
+        <Label Grid.Column="1" Grid.Row="1" MinWidth="124" Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Name="vertical_speed"  Content="{Binding VerticalSpeed}"  HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Margin="5,3,37,3" />
+        <Label Grid.Column="1" Grid.Row="2" MinWidth="124" Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Name="ground_speed" Content="{Binding GroundSpeed}"  HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Margin="5,2,37,3"  />
+        <Label Grid.Column="1" Grid.Row="3" MinWidth="124" Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Name="airspeed" Content="{Binding AirSpeed}"  HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Margin="5,3,37,2"  />
+        <Label Grid.Column="1" Grid.Row="4" MinWidth="124" Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Name="gps_alt" Content="{Binding GpsAlt}"  HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Margin="5,2,37,3"  />
+        <Label Grid.Column="1" Grid.Row="5" MinWidth="124" Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Name="roll" Content="{Binding Roll}"  HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Margin="5,3,37,2"  />
+        <Label Grid.Column="1" Grid.Row="6" MinWidth="124" Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Name="pitch" Content="{Binding Pitch}"  HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="30" Margin="5,2,37,3"  />
+        <Label Grid.Column="1" Grid.Row="7" MinWidth="124" Background="#292c26" Foreground="#939e89" FontSize="14" Padding="6"  Name="alt" Content="{Binding Altitude}"  HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" Height="30" Margin="5,3,37,2"/>
+        <TextBlock x:Name="ErrorTextBox" Visibility="{Binding ErrorMsg}" TextAlignment="Center" TextWrapping="WrapWithOverflow" Grid.ColumnSpan="2" Grid.RowSpan="2" Text="Problem Occured - Connection To The Server was Severed, Please Disconnect and Try Again" Foreground="#FFF31313" Grid.Row="9" Margin="5,7,29,-6" FontWeight="Bold"/>
+        <Image x:Name="ErrorPic" Visibility="{Binding ErrorMsg}" Margin="84,3,49,0" Source="/GUI Flight Simulator Controller;component/Image1.png" Stretch="Fill" Grid.Row="8" RenderTransformOrigin="0.692,0.958" Grid.Column="1"/>
+
+
+
+
+
+
+
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,26 @@
+﻿<Window x:Name="StartWin" x:Class="GUI_Flight_Simulator_Controller.controlers.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:GUI_Flight_Simulator_Controller.controlers"
+        mc:Ignorable="d"
+        Title="StartWindow" Height="465.984" Width="378.279" Closed="StartWin_Closed">
+    <Grid>
+        <Rectangle Height="280" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2281D1"/>
+                    <GradientStop Color="#FF34268A" Offset="1"/>
+                    <GradientStop Color="#FF33288B" Offset="0.546"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <local:ConnectView  x:Name="ConnectWin" Margin="54,135,55,83"/>
+        <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Connect To The Simulator" Margin="0,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="25"/>
+        <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="You may use default port and ip" Margin="20,65,13,0" VerticalAlignment="Top" Foreground="White" FontSize="19" Height="48"/>
+        <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="or choose your own" Margin="10,89,10,0" VerticalAlignment="Top" Foreground="White" FontSize="19" Height="48"/>
+       
+    </Grid>
+</Window>
